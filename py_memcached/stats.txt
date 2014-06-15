@@ -1,0 +1,36 @@
+Current server: 128.148.16.164:11211 (1)
+bytes_written:1758777690
+total_items:19737
+curr_connections:5
+threads:4
+cmd_set:19909
+cmd_get:1018930
+get_misses:111569
+get_hits:907361
+bytes_read:124491038
+
+
+Current server: 128.148.16.165:11211 (1)
+bytes_written:2008724280
+total_items:302289
+curr_connections:5
+threads:4
+cmd_set:320543
+cmd_get:1181760
+get_misses:100926
+get_hits:1080834
+bytes_read:95379017
+
+
+Current server: 128.148.16.178:11211 (1)
+bytes_written:1766141203
+total_items:7782
+curr_connections:5
+threads:4
+cmd_set:7826
+cmd_get:884686
+get_misses:123128
+get_hits:761558
+bytes_read:61947391
+
+

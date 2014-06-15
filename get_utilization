@@ -1,0 +1,40 @@
+#!/bin/bash
+
+mkdir temp_name
+
+ssh scale@128.148.16.120 'rm /usr/local/natinst/nidaqmxbase/examples/ai/ServerVoltage'
+ssh scale@128.148.16.163 ./nodeperfmon_start &
+ssh scale@128.148.16.165 ./nodeperfmon_start &
+ssh scale@128.148.16.166 ./nodeperfmon_start &
+ssh scale@128.148.16.167 ./nodeperfmon_start &
+ssh scale@128.148.16.168 ./nodeperfmon_start &
+ssh scale@128.148.16.164 ./nodeperfmon_start &
+ssh scale@128.148.16.178 ./nodeperfmon_start &
+ssh scale@128.148.16.179 ./nodeperfmon_start &
+
+#./run_loader.sh &
+sleep 10
+#./stop_loader.sh
+
+ssh scale@128.148.16.163 ./nodeperfmon_stop &
+ssh scale@128.148.16.165 ./nodeperfmon_stop &
+ssh scale@128.148.16.166 ./nodeperfmon_stop &
+ssh scale@128.148.16.167 ./nodeperfmon_stop &
+ssh scale@128.148.16.168 ./nodeperfmon_stop &
+ssh scale@128.148.16.164 ./nodeperfmon_stop &
+ssh scale@128.148.16.178 ./nodeperfmon_stop &
+ssh scale@128.148.16.179 ./nodeperfmon_stop &
+
+scp scale@128.148.16.120:/usr/local/natinst/nidaqmxbase/examples/ai/ServerVoltage temp_name/current.txt 
+scp scale@128.148.16.163:/reza/scale_mon/result temp_name/master_result.txt 
+scp scale@128.148.16.165:/reza/scale_mon/result temp_name/node1_result.txt 
+scp scale@128.148.16.166:/reza/scale_mon/result temp_name/node2_result.txt 
+scp scale@128.148.16.167:/reza/scale_mon/result temp_name/node3_result.txt 
+scp scale@128.148.16.168:/reza/scale_mon/result temp_name/node4_result.txt 
+scp scale@128.148.16.164:/reza/scale_mon/result temp_name/node5_result.txt 
+scp scale@128.148.16.178:/reza/scale_mon/result temp_name/node6_result.txt 
+scp scale@128.148.16.179:/reza/scale_mon/result temp_name/node7_result.txt 
+
+#cp jun5th1/config.txt temp_name
+#./parse_current current.txt
+#mv parsed_current.txt temp_name

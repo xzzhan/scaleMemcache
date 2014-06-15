@@ -1,0 +1,5 @@
+3 front end: master, node3, node4, node7
+3 memcached (2.133GHz): node1, node5, and node6 
+1 backend: node2
+4 clients
+run for 1 hours
