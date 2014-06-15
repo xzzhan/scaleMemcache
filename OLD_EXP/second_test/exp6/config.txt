@@ -1,5 +1,0 @@
-3 front end: master, node3, node4, node7
-3 memcached: node1 (2.267GHz), node5 (1.6GHz), and node6 (1.6GHz)
-1 backend: node2
-4 clients
-run for 1 hours
