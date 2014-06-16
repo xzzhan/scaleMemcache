@@ -3,8 +3,6 @@
 freq=("1600" "1867" "2267")
 name="exp"
 
-./run_loader.py -n 4 -t 18100
-
 
 for i in 0 1 2
 do

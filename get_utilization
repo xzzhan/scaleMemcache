@@ -13,7 +13,7 @@ ssh scale@128.148.16.178 ./nodeperfmon_start &
 ssh scale@128.148.16.179 ./nodeperfmon_start &
 
 #./run_loader.sh &
-sleep 10
+sleep 60
 #./stop_loader.sh
 
 ssh scale@128.148.16.163 ./nodeperfmon_stop &
