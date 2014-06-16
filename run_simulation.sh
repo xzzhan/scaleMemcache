@@ -3,13 +3,18 @@
 freq=("1600" "1867" "2267")
 name="exp"
 
+ssh scale@128.148.16.166 ./masterfreq2267 > /dev/null
+ssh scale@128.148.16.163 ./masterfreq1600 > /dev/null
+ssh scale@128.148.16.167 ./masterfreq1600 > /dev/null
+ssh scale@128.148.16.179 ./masterfreq1600 > /dev/null
+
 
 for i in 0 1 2
 do
 	temp_freq=${freq[$i]}
-	ssh scale@128.148.16.164 ./masterfreq$temp_freq
-	ssh scale@128.148.16.165 ./masterfreq$temp_freq
-	ssh scale@128.148.16.178 ./masterfreq$temp_freq
+	ssh scale@128.148.16.164 ./masterfreq$temp_freq > /dev/null
+	ssh scale@128.148.16.165 ./masterfreq$temp_freq > /dev/null
+	ssh scale@128.148.16.178 ./masterfreq$temp_freq > /dev/null
         
         echo "Start to measure the utilizations\n"
 	./run_loader.py -n 4 -t 60 &
