@@ -34,7 +34,6 @@ def main(argv):
             t = int(arg)
 
     for i in range(n):
-#         threadLauncher(i,t)
         try:
             thread.start_new_thread(threadLauncher,(i,t))
         except:
